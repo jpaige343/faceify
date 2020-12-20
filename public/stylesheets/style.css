@@ -215,6 +215,37 @@ text-decoration: underline;
   margin: 10px 0;
 }
 
+/* Message thread page */
+
+#replyContainer {
+  background-color: rgb(250, 241, 231);
+  margin-right: auto; 
+  margin-left:  auto;
+  margin-top: 30px;
+  max-width: 960px; 
+  padding-right: 10px; 
+  padding-left:  10px;
+  border: 5px solid gray;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#replyScroll {
+  height: 18rem; 
+  overflow-y: scroll;
+}
+
+#replyBtn {
+  margin-top: 10px;
+  border-radius: 12px 2px;
+  border: none;
+  background-color: rgb(243, 105, 186);
+}
+
+#avatarPhoto {
+  border-radius: 50%
+}
 /* #navBar {
 
 } */

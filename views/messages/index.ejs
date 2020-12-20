@@ -4,16 +4,13 @@
         <div class="overflow-auto" id="messageScroll">
             <% messages.forEach(message=> { %>
                 <div class="card">
-                    <div class="message-card-header">
-                        <%= message.postedBy %>
-                    </div>
                     <div class="message-card-body">
-                        <h5 class="card-title">
+                        <h5>
                             <%= message.content %>
                         </h5>
-                        <p class="card-text">
-                            <%= message.createdAt.toLocaleString() %>
-                        </p>
+                        <div>
+                            <%= message.createdAt.toLocaleString() %> - <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
+                        </div>
                         <a href="/messages/<%= message._id %>" class="btn btn-primary" id="repliesBtn">View Thread</a>
                     </div>
                 </div>

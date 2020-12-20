@@ -32,10 +32,11 @@ function show(req,res) {
 
 function reply(req, res) {
     Message.findById(req.params.id).then((message) => {
-      req.body.postedBy = req.user.userName;
-      message.replies.push(req.body);
+      req.body.postedBy = req.user.userName
+      req.body.avatar = req.user.avatar
+      message.replies.push(req.body)
       message.save().then(() => {
-        res.redirect(`/messages/${req.params.id}`);
+        res.redirect(`/messages/${req.params.id}`)
       });
     });
   }

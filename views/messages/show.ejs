@@ -1,18 +1,39 @@
 <%- include('../partials/header', user) %>
-<p><%= message.content %></p>
-<p>Posted <%= message.createdAt.toLocaleString() %> - <%= message.postedBy %> </p>
+<div class="container" id="replyContainer">
+    <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th scope="row">
+                <div class="replyHead"><h4><b><%= message.content %></b></h4>
+                    <p><i><%= message.createdAt.toLocaleString() %> - <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt=""></i></p></div>
+        </tbody>
+      </table>
+<table class="table table-striped">
+    <tbody>
+      <tr>
+        <th scope="row">
+            <div class="overflow-auto" id="replyScroll">
+            <% message.replies.forEach(r => { %>
+               <h5><%= r.content %></h5> 
+                <p><i><%= message.createdAt.toLocaleString() %> - <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt=""></i></p>
+                <hr>
+            <% }) %>
+            </div></th>
+    </tbody>
+  </table>
 
-<% message.replies.forEach(r => { %>
-   <h5><%= r.content %> - <%= r.postedBy %></h5> 
-<% }) %>
-
-
-<form action="/messages/<%= message._id %>" method="POST">
-    <div class="message-form-group">
-        <input type="text" class="form-control" name="content" placeholder="Enter Message Here..">
-    </div>
-    <button type="submit" class="btn btn-primary">Post Message</button>
-</form>
+<table class="table table-striped">
+    <tbody>
+      <tr>
+        <th scope="row"><form action="/messages/<%= message._id %>" method="POST">
+            <div class="message-form-group">
+                <textarea type="text" class="form-control" name="content" placeholder="Enter Message Here.."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="replyBtn">Post Message</button>
+        </form></th>
+    </tbody>
+  </table>
+</div>
 
 <%- include('../partials/footer') %>
 
