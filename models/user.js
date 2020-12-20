@@ -21,7 +21,6 @@ const userSchema = new Schema(
     lifestyle: String,
     skinType: String,
     goal: String,
-    // friends: [{type: Schema.Types.ObjectId, ref: "User"}],
     products: [{type: Schema.Types.ObjectId, ref: "product"}],
     favorites: [favoriteSchema]
     

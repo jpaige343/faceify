@@ -44,14 +44,7 @@ function show(req, res) {
     })
 }
 
-// function addFriend(req, res) {
-//     req.user.friends.push(req.params.id)
-//     console.log(user.friends)
-//     req.user.save()
-//     .then(() => {
-//         res.redirect(`/users/${req.params.id}`)
-//     })
-// }
+
 
 
 
