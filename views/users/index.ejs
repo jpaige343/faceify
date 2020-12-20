@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+<%users.forEach(u => { %>
+    <a href="/users/<%= u._id %>">
+    <div class="user-card">
+      <div class="user-card-body">
+        <img height="50" id="userPhoto" src="<%= u.avatar ? u.avatar : 'http://theoldreader.com/kittens/300/300/' %>" alt="user pic"> 
+        <%= u.name %></a> 
+      </div>
+    </div>
+<% }) %>
+
+<%- include('../partials/footer') %>

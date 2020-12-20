@@ -1,0 +1,224 @@
+
+body {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: rgb(97, 146, 144);
+
+}
+
+a {
+  color: rgb(235, 42, 148);
+}
+
+a:hover {
+  color: gray;
+}
+
+button:active {
+  background:rgb(236, 175, 211)
+}
+
+nav {
+  height: 60px;
+  background-color: rgb(247, 242, 237);
+
+}
+
+.card-body {
+  background-color: rgb(250, 241, 231);
+  width: 50rem;
+  height: 32rem;
+  border: 5px solid rgb(235, 42, 148);
+}
+
+/* Product show*/
+#prodShowCont {
+  background-color: rgb(247, 242, 237);
+  margin-right: auto; 
+  margin-left:  auto;
+  margin-top: 20px;
+  max-width: 960px; 
+  border: 5px solid gray;
+
+}
+
+#prodCard {
+  display: flex;
+  justify-content: center;
+  height: 34rem;
+  width: 50rem;
+  background-color: rgb(247, 242, 237);
+  max-width: 960px;
+  margin-right: auto; 
+  margin-left:  auto;
+  border: none;
+}
+
+#prodImg {
+  border-radius: 50%;
+  height: 16rem; 
+  width: 16rem;
+  margin: 8rem 6rem 6rem 0;
+}
+
+.card-title1 {
+  color: rgb(69, 136, 133);
+  font-family:'Dancing Script', cursive;
+  font-size: 38px;
+  display: flex;
+  margin-top: 20px;
+  
+}
+
+.commentInput {
+  width: 20rem;
+  height: 5rem;
+}
+
+.favBtn {
+  border-radius: 12px 2px;
+  border: none;
+  background-color: rgb(243, 105, 186);
+  color: white;
+  margin-top: 2px;
+}
+
+#commentBtn {
+  border-radius: 12px 2px;
+  background-color: rgb(69, 136, 133);
+  border: none;
+}
+
+.prodBack {
+margin-left: 25rem;
+font-size: 20px;
+text-decoration: underline;
+}
+
+#prodScroll {
+  height: 36rem; 
+  overflow-y: scroll;
+}
+
+/* Product index card */
+#prodText {
+  color: rgb(69, 136, 133);
+  font-family:'Dancing Script', cursive;
+  font-size: 55px;
+  text-align: center; 
+  margin: 20px 0;
+}
+
+#prodTable {
+  max-width: 960px;
+}
+
+#prodListCont {
+  background-color: rgb(250, 241, 231);
+  margin-right: auto; 
+  margin-left:  auto;
+  margin-top: 20px;
+  max-width: 960px; 
+  padding-right: 10px; 
+  padding-left:  10px;
+  border: 5px solid gray;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add New Product */
+
+#addProdCont {
+  background-color: rgb(250, 241, 231);
+  margin-right: auto; 
+  margin-left:  auto;
+  margin-top: 30px;
+  max-width: 960px; 
+  padding-right: 10px; 
+  padding-left:  10px;
+  border: 5px solid gray;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#newProd {
+  color: rgb(69, 136, 133);
+  font-family:'Dancing Script', cursive;
+  font-size: 55px;
+  text-align: center; 
+  margin: 20px 0;
+}
+
+#prodForm {
+  margin-right: auto; 
+  margin-left:  auto;
+  margin-top: 20px;
+  max-width: 960px; 
+  padding-right: 10px; 
+  padding-left:  10px;
+}
+
+#addBtn {
+  margin-bottom: 10px;
+  border-radius: 12px 2px;
+  border: none;
+  background-color: rgb(243, 105, 186);
+}
+
+#textInput {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Messages Index */
+
+#messagesCont {
+  background-color: rgb(250, 241, 231);
+  margin-right: auto; 
+  margin-left:  auto;
+  margin-top: 30px;
+  max-width: 960px; 
+  padding-right: 10px; 
+  padding-left:  10px;
+  border: 5px solid gray;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#messageScroll {
+  height: 25rem; 
+  overflow-y: scroll;
+}
+
+#messageBtn {
+  margin-bottom: 10px;
+  border-radius: 12px 2px;
+  border: none;
+  background-color: rgb(243, 105, 186);
+}
+
+#repliesBtn {
+  margin-bottom: 10px;
+  border-radius: 12px 2px;
+  border: none;
+  background-color: rgb(69, 136, 133);
+}
+
+#messageTitle {
+  color: rgb(69, 136, 133);
+  font-family:'Dancing Script', cursive;
+  font-size: 55px;
+  text-align: center; 
+  margin: 10px 0;
+}
+
+/* #navBar {
+
+} */
+
+
+
+

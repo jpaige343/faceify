@@ -1,0 +1,102 @@
+<%- include('../partials/header') %>
+  <div class="col d-flex justify-content-center" style='margin-top: 20px;'>
+    <div class="card" style="width: 50rem;">
+      <ul class="nav nav-tabs " id="myTab" role="tablist">
+        <!--Info Tab-->
+        <li class="nav-item">
+          <a class="nav-link active" id="profileinfo-tab" data-toggle="tab" href="#profileinfo" role="tab"
+            aria-controls="profileinfo" aria-selected="true">My Info</a>
+        </li>
+        <!-- Update tab -->
+        <li class="nav-item">
+          <a class="nav-link" id="updateinfo-tab" data-toggle="tab" href="#updateinfo" role="tab"
+            aria-controls="updateinfo" aria-selected="false">Update Info</a>
+        </li>
+        <!-- Friends tab -->
+        <li class="nav-item">
+          <a class="nav-link" id="friends-tab" data-toggle="tab" href="#friends" role="tab" aria-controls="friends"
+            aria-selected="false">Friends</a>
+        </li>
+        <!-- Favorites tab -->
+        <li class="nav-item">
+          <a class="nav-link" id="favorites-tab" data-toggle="tab" href="#favorites" role="tab" aria-controls="products"
+            aria-selected="false">Products</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="profileinfo" role="tabpanel" aria-labelledby="profileinfo-tab">
+          <div class="card-body">
+            <h5 class="card-title"><%= user.name %>
+            </h5>
+            <p class="card-text">Username: <%= user.userName %>
+            </p>
+            <p class="card-text">Skin Type: <%= user.skinType %>
+            </p>
+            <p class="card-text">Lifestyle: <%= user.lifestyle %>
+            </p>
+            <p class="card-text">Goal: <%= user.goal %>
+            </p>
+            <div class="overflow-auto" style="height: 35px; overflow-y: scroll;">
+            <p class="card-text">Bio: <%= user.bio %>
+            </p>
+            </div>
+            <img src="/images/icecream.png" alt="ice cream pic" style="height: 10rem; width: 15rem; margin: 5rem 0 15rem 15rem;">
+          </div>
+        </div>
+        <!-- Card for Update info -->
+        <div class="tab-pane fade" id="updateinfo" role="tabpanel" aria-labelledby="updateinfo-tab">
+          <div class="card-body">
+            <!-- Updata info route -->
+            <form action="/users/<%= user._id %>?_method=PUT" method="POST">
+              <div class="form-row">
+                <div class="col-md-4">
+                  <label>Username:</label>
+                  <input type="text" id="userName" class="form-control" name="userName" value="<%= user.userName %>">
+                </div><br>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label>Lifestyle:</label>
+                  <input type="text" id="userLifestyle" class="form-control" name="lifestyle" value="<%= user.lifestyle %>">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label>Skin Type:</label>
+                  <input type="text" id="userSkinType" class="form-control" name="skinType" value="<%= user.skinType %>">
+                </div>
+              </div>
+              <div class="form-row">
+                <div>
+                  <label for="userGoal">Goals:</label>
+                  <input type="text" id="userGoal" class="form-control" name="goal" value="<%= user.goal %>">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label>Bio:</label>
+                  <textarea rows="3" id="bio" class="form-control" name="bio"><%= user.bio %></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-warning">Update</button>
+            </form>
+            </div>
+            </div>
+            <!--Friends Card-->
+      
+            <!--Favorites Card-->
+            <div class="tab-pane fade show" id="favorites" role="tabpanel" aria-labelledby="favorites-tab">
+              <div class="card-body">
+                <a href='/products'>Go To Products</a>
+                <% user.favorites.forEach(p => { %>
+                  <form action='/products/<%= p._id %>/favs?_method=DELETE' method="POST">
+                    <button>x</button>
+                  <a href='/products/<%= p._id %>'><p><%= p.name %></p></a>
+                </form>
+                 <% }) %>
+              </div>
+            </div>
+          </div>
+       
+
+      <%- include('../partials/footer') %>

@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+    <div class="show-card" style="width: 18rem;">
+        <img class="card-img-top" src="<%= userInfo.avatar %>" alt="avatar">
+        <div class="show-card-body">
+            <h5 class="show-card-title">
+                <%= userInfo.name %>
+            </h5>
+            <p class="show-card-text">Skin Type: <%= userInfo.skinType %>
+            </p>
+            <p class="show-card-text">Goals: <%= userInfo.goal %>
+            </p>
+            <form action="/users/<%= userInfo._id %>/friend" method="GET">
+                <button class="btn btn-primary">Add To Friends</button>
+            </form>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

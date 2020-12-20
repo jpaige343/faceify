@@ -1,0 +1,31 @@
+<%- include('../partials/header', user) %>
+
+
+<div class='container' id="prodListCont">
+  <h3 id="prodText">Product Library</h3>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" style='color: cream;'>Product Name:</th>
+        <th scope="col">Description:</th>
+        <th scope="col">Main Ingredients:</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        <% products.forEach(function(p) { %>
+      <tr>
+        <td><%= p.name %></td>
+        <td><%= p.description %></td>
+        <td><%= p.mainIngredients %></td>
+        <td><a href="/products/<%= p._id %>">Details</a></td>
+        
+        
+      </tr>
+      <% }); %>
+
+    </div>
+  
+
+
+<%- include('../partials/footer') %>

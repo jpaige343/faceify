@@ -1,0 +1,47 @@
+<%- include('../partials/header', user) %>
+        <div class="container-fluid" id="prodShowCont">
+        <div class="col d-flex justify-content-center"  id="prodContainer">
+            <div class="overflow-auto" id="prodScroll">
+            <div class="card flex-row flex-wrap" id="prodCard">
+                <img id="prodImg" src="/images/cream.jpg" alt="product image">
+                <div class="card-block">
+                    <h4 class="card-title1">
+                        <%= product.name %>
+                    </h4>
+                    <p class="card-text"><b>Description:</b>
+                        <%= product.description %>
+                    </p>
+                    <p class="card-text"><b>Main Ingredients:</b>
+                        <%= product.mainIngredients %>
+                    </p>
+                    <p class="card-text"><b>Comments:</b></p>
+                    <div class="overflow-auto" style="height: 140px; overflow-y: scroll;">
+                        <% product.comments.forEach(function(p) { %>
+                            <div>
+                                "<%= p.text %>"
+                            </div>
+                            <% }) %>
+                                <div>
+                                </div>
+                    </div>
+                    <br>
+                    <form method='POST' action="/products/<%= product._id %>/comments">
+                        <textarea type='text' name='text' class="commentInput"></textarea>
+                        <div></div>
+                        <div><button type='submit' class="btn btn-primary" id="commentBtn">Add Comment</button></div>
+                    </form>
+                    <form action='/products/<%= product._id %>/favs' method='POST'>
+                        <input type='text' hidden name='name' value='<%=product.name %>'>
+                        <input type='text' hidden name='mainIngredients' value='<%= product.mainIngredients %>'>
+                        <button class="favBtn">Add To Collection</button>
+                    </form>
+                    <div class="prodBack"><a href="/products">Back</a></div>
+                </div>
+                <div class="w-100"></div>
+            </div>
+        </div>
+    </div>
+  
+  
+
+    <%- include('../partials/footer') %>

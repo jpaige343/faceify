@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+    <div class="container" id="messagesCont">
+        <h1 id="messageTitle">Faceify Message Board</h1>
+        <div class="overflow-auto" id="messageScroll">
+            <% messages.forEach(message=> { %>
+                <div class="card">
+                    <div class="message-card-header">
+                        <%= message.postedBy %>
+                    </div>
+                    <div class="message-card-body">
+                        <h5 class="card-title">
+                            <%= message.content %>
+                        </h5>
+                        <p class="card-text">
+                            <%= message.createdAt.toLocaleString() %>
+                        </p>
+                        <a href="/messages/<%= message._id %>" class="btn btn-primary" id="repliesBtn">View Thread</a>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+        <form action="/messages" method="POST">
+            <div class="form-group">
+                <textarea type="text" class="form-control" name="content" placeholder="Enter Message Here.."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="messageBtn">Post Message</button>
+        </form>
+    </div>
+    <%- include('../partials/footer') %>

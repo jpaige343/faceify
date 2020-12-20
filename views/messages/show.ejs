@@ -1,0 +1,18 @@
+<%- include('../partials/header', user) %>
+<p><%= message.content %></p>
+<p>Posted <%= message.createdAt.toLocaleString() %> - <%= message.postedBy %> </p>
+
+<% message.replies.forEach(r => { %>
+   <h5><%= r.content %> - <%= r.postedBy %></h5> 
+<% }) %>
+
+
+<form action="/messages/<%= message._id %>" method="POST">
+    <div class="message-form-group">
+        <input type="text" class="form-control" name="content" placeholder="Enter Message Here..">
+    </div>
+    <button type="submit" class="btn btn-primary">Post Message</button>
+</form>
+
+<%- include('../partials/footer') %>
+

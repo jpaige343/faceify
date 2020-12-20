@@ -1,0 +1,30 @@
+<%- include("../partials/header", user) %>
+
+    <div class="container" id="addProdCont">
+        <h2 id="newProd">Add New Product</h2>
+        <form id="new-form" action="/products" method="POST">
+            <div class="form-group" id="prodForm">
+                <label for="product-name">Submitted By:</label>
+                <input type="text" class="form-control" id="textInput" name="">
+            </div>
+        <div class="form-group" id="prodForm">
+            <label for="product-name">Product Brand/Name:</label>
+            <input type="text" class="form-control" id="textInput" name="name">
+        </div>
+        <div class="form-group" id="prodForm">
+            <label for="description">Description:</label>
+            <input type="text" class="form-control" id="textInput" name="description">
+        </div>
+        <div class="form-group" id="prodForm">
+            <label>Main Ingredients:</label>
+            <input type="text" class="form-control" id="textInput" name="mainIngredients">
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-2" id="prodForm">
+              <button class="btn btn-primary btn-block" type="submit" id="addBtn">Add to Database</button>
+            </div>
+    </form>
+</div>
+</div>
+
+<%- include("../partials/footer") %>
