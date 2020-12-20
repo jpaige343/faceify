@@ -18,18 +18,15 @@ button:active {
   background:rgb(236, 175, 211)
 }
 
+/* Navbar */
 nav {
   height: 60px;
   background-color: rgb(247, 242, 237);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card-body {
-  background-color: rgb(250, 241, 231);
-  width: 50rem;
-  height: 32rem;
-  border: 5px solid rgb(235, 42, 148);
-}
 
 /* Product show*/
 #prodShowCont {
