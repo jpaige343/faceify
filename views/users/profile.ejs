@@ -80,11 +80,9 @@
             <!--Favorites Card-->
             <div class="tab-pane fade show" id="favorites" role="tabpanel" aria-labelledby="favorites-tab">
               <div class="card-body">
-                <a href='/products'>Go To Products</a>
                 <% user.favorites.forEach(p => { %>
                   <form action='/products/<%= p._id %>/favs?_method=DELETE' method="POST">
-                    <button>x</button>
-                  <a href='/products/<%= p._id %>'><p><%= p.name %></p></a>
+                  <a href='/products/<%= p._id %>'><p><%= p.name %> <button class="deleteBtn">x</button></p></a>
                 </form>
                  <% }) %>
               </div>

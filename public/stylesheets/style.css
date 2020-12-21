@@ -107,8 +107,7 @@ button:active {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  background-color: white;
-  border: 1px solid pink;
+  border: none;
   word-wrap: break-word;
 }
 
@@ -123,6 +122,12 @@ button:active {
 
 .profPic {
   margin-left: 3rem;
+}
+
+.deleteBtn {
+  border-radius: 50%;
+  background-color: rgb(97, 146, 144);
+  color: white;
 }
 
 

@@ -18,7 +18,7 @@ Designed with a mobile first approach
 
 # Getting Started:
 
-Check it out [here](https://faceifyapp.herokuapp.com/)
+Check it out [here](https://faceify-project.herokuapp.com/)
 
 # Take a peek at the planning process:
 
@@ -31,4 +31,5 @@ My Trello board can be viewed [here](https://trello.com/b/xRRvQe8B/unit-2-projec
 - Impliment a search function in the database so users can search products by skin type (oily, dry, sensitive..etc), concern, or ingredients
 - Add the ability for a user to attach a link to the product they are posting 
 - Add the ability to @ the op in the message reply thread
+
 

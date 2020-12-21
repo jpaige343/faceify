@@ -38,7 +38,7 @@ function reply(req, res) {
     Message.findById(req.params.id)
     .populate('postedBy')
     .then((message) => {
-      req.body.postedBy = req.user._id
+      req.body.postedBy = req.user.userName ? req.user.userName : req.user.name;
       req.body.avatar = req.user.avatar
       message.replies.push(req.body)
       message.save().then(() => {
