@@ -15,7 +15,7 @@
             <div class="overflow-auto" id="replyScroll">
             <% message.replies.forEach(r => { %>
                <h5><%= r.content %></h5> 
-                <p><i><%= r.createdAt.toLocaleString('en-US', { timeZone: 'CST' }) %> - <%= r.postedBy %> <img id="avatarPhoto" width="30" src="<%= r.avatar %>" alt=""></i></p>
+                <p><i><%= r.createdAt.toLocaleString('en-US', { timeZone: 'CST' }) %> - <a href="/users/<%= user._id %>"><%= r.postedBy %></a><img id="avatarPhoto" width="30" src="<%= r.avatar %>" alt=""></i></p>
                 <hr>
             <% }) %>
             </div></th>
