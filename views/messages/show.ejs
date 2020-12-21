@@ -15,7 +15,7 @@
             <div class="overflow-auto" id="replyScroll">
             <% message.replies.forEach(r => { %>
                <h5><%= r.content %></h5> 
-                <p><i><%= r.createdAt.toLocaleString() %> - <a href="/users/<%= r.postedById %>"><%= r.postedBy %></a><img id="avatarPhoto" width="30" src="<%= r.avatar %>" alt=""></i></p>
+                <p><i><%= r.createdAt.toLocaleString() %> - <a href="/users/<%= r.postedById %>"><%= r.postedBy %> </a> <img id="avatarPhoto" width="30" src="<%= r.avatar %>" alt=""></i></p>
                 <hr>
             <% }) %>
             </div></th>
@@ -29,7 +29,7 @@
             <div class="message-form-group">
                 <textarea type="text" class="form-control" name="content" placeholder="Enter Message Here.."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" id="replyBtn">Post Message</button>
+            <button type="submit" class="btn btn-primary" id="replyBtn">Reply</button>
         </form></th>
     </tbody>
   </table>
