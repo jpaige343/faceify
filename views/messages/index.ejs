@@ -9,7 +9,7 @@
                             <%= message.content %>
                         </h5>
                         <div>
-                            <%= message.createdAt.toLocaleString('en-US', { timeZone: 'CST' }) %> - <a href="/users/<%= user._id %>"><%= message.postedBy.userName %></a><img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
+                            <%= message.createdAt.toLocaleString() %> - <a href="/users/<%= user._id %>"><%= message.postedBy.userName %></a><img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
                         </div>
                         <a href="/messages/<%= message._id %>" class="btn btn-primary" id="repliesBtn">View Thread</a>
                     </div>
