@@ -10,10 +10,10 @@ const replySchema = new Schema({
 })
 
 const messageSchema = new Schema({
-    postedBy: String,
+    postedBy: {type: Schema.Types.ObjectId, ref: "User"},
     avatar: String,
     content: String,
-    replies: [replySchema]
+    replies: [replySchema],
 }, {
     timestamps: true
 })

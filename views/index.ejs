@@ -10,31 +10,29 @@
     </style>
 
 
-    <div class="col d-flex justify-content-center" style="background-color: rgb(137, 177, 175);">
-        <div class="card" style="margin: 40px;">
-            <div class="card-body"
-                style="text-align: center; background-color: rgb(250, 241, 231);  height: 30rem; width: 50rem;">
+    <div class="container" id="landingCont">
+        <div class="card" id="landingBody">
+            <div class="card-body">
                 <% if (user) { %>
-                    <h1 style="margin-bottom: 20px; font-family: 'Dancing Script', cursive; font-size: 90px;"> Faceify 
-                    </h1>
-                    
-                    <div><a href="/products" style="padding: 30px; font-size: 30px;">Products</a>
-                        <a href="users/<%= user._id %>" style="padding: 30px; font-size: 30px;">Profile</a>
-                    </div>
-                    <img src="images/icecream.png" style="width: 12rem; height: 12rem; margin-top: 30px;">
+                    <h1 class="faceify"> Faceify </h1>
+                   <p><a href="/products" class="landingLinks">Products  </a> 
+                        <a href="users/<%= user._id %>" class="landingLinks">Profile</a>
+                    </p> 
+                    <img src="images/icecream.png" class="logo">
                     <% } else { %>
-                        <h1 style="margin-top: 10px; font-family: 'Dancing Script', cursive; font-size: 90px;">Faceify
+                        <h1 class="faceify">Faceify
                         </h1>
                         <h2
                             style="margin-top: 20px; margin-bottom: 10px; font-family: 'Poppins', sans-serif; font-size: 20px; ">
                             <i><strong>A publicly sourced skin-care database</i></strong></h2>
-                        <div><a href="/auth/google" style="font-size: 20px;">Get Started</a></div>
-                        <div><img src="images/icecream.png" style="width: 10rem; height: 10rem; margin-top: 25px;">
+                        <div><a href="/auth/google" class="landingLinks">Get Started</a></div>
+                        <div><img src="images/icecream.png" class="logo">
                         </div>
                         <% } %>
             </div>
         </div>
     </div>
+</div>
 
 
 

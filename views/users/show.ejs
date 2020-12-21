@@ -1,16 +1,18 @@
 <%- include('../partials/header') %>
 
-    <div class="show-card" style="width: 18rem;">
-        <img class="card-img-top" src="<%= userInfo.avatar %>" alt="avatar">
-        <div class="show-card-body">
-            <h5 class="show-card-title">
-                <%= userInfo.name %>
-            </h5>
-            <p class="show-card-text">Skin Type: <%= userInfo.skinType %>
-            </p>
-            <p class="show-card-text">Goals: <%= userInfo.goal %>
-            </p>
-        </div>
+<div class="container">
+<div class="show-card" style="width: 18rem;">
+    <img class="card-img-top" src="<%= userInfo.avatar %>" alt="avatar">
+    <div class="show-card-body">
+        <h5 class="show-card-title">
+            <%= userInfo.name %>
+        </h5>
+        <p class="show-card-text">Skin Type: <%= userInfo.skinType %>
+        </p>
+        <p class="show-card-text">Goals: <%= userInfo.goal %>
+        </p>
     </div>
+  </div>
+</div>
 
-    <%- include('../partials/footer') %>
+<%- include('../partials/footer') %>
