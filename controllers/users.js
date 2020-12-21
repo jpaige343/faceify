@@ -34,10 +34,11 @@ function show(req, res) {
     User.findById(req.params.id)
     .then((userInfo) => {
         Product.find({favorites: userInfo._id})
-        .then((products) =>{
+        .then((favorites, products) =>{
             res.render(`users/show`, {
                 userInfo,
                 user: req.user,
+                favorites,
                 products
             })
         })

@@ -108,7 +108,6 @@ button:active {
   flex-direction: column;
   justify-content: left;
   border: none;
-  word-wrap: break-word;
 }
 
 .prof-card-title {
@@ -117,11 +116,12 @@ button:active {
   align-items: center;
   font-size: 30px;
   color:  rgb(235, 42, 148);
-  word-wrap: break-word;
 }
 
 .profPic {
   margin-left: 3rem;
+ height: 10rem;
+ width: 15rem;
 }
 
 .deleteBtn {
@@ -130,6 +130,20 @@ button:active {
   color: white;
 }
 
+/* Profile Show */
+#showImg {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 20px 0 10px 0;
+}
+
+.show-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
 
 
 

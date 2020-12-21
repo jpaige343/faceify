@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 const replySchema = new Schema({
     postedBy: String,
     avatar: String,
-    content: String
+    content: String,
+    postedById: String
 }, {
     timestamps: true
 })
