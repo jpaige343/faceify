@@ -1,7 +1,5 @@
 <%- include('../partials/header', user) %>
-        <div class="container-fluid" id="prodShowCont">
-        <div class="col d-flex justify-content-center"  id="prodContainer">
-            <div class="overflow-auto" id="prodScroll">
+    <div class="container">
             <div class="card flex-row flex-wrap" id="prodCard">
                 <img id="prodImg" src="/images/cream.jpg" alt="product image">
                 <div class="card-block">
@@ -15,7 +13,7 @@
                         <%= product.mainIngredients %>
                     </p>
                     <p class="card-text"><b>Comments:</b></p>
-                    <div class="overflow-auto" style="height: 140px; overflow-y: scroll;">
+                    <div class="overflow-auto" id="prodScroll">
                         <% product.comments.forEach(function(p) { %>
                             <div>
                                 "<%= p.text %>"
@@ -24,6 +22,7 @@
                                 <div>
                                 </div>
                     </div>
+
                     <br>
                     <form method='POST' action="/products/<%= product._id %>/comments">
                         <textarea type='text' name='text' class="commentInput"></textarea>
@@ -40,8 +39,8 @@
                 <div class="w-100"></div>
             </div>
         </div>
-    </div>
-  
-  
 
-    <%- include('../partials/footer') %>
+
+
+
+        <%- include('../partials/footer') %>

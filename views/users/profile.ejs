@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
-  <div class="col d-flex justify-content-center" style='margin-top: 20px;'>
-    <div class="card" style="width: 50rem;">
+  <div class="container">
+    <div class="card">
       <ul class="nav nav-tabs " id="myTab" role="tablist">
         <!--Info Tab-->
         <li class="nav-item">
@@ -31,11 +31,11 @@
             </p>
             <p class="card-text">Goal: <%= user.goal %>
             </p>
-            <div class="overflow-auto" style="height: 35px; overflow-y: scroll;">
+            <div class="overflow-auto" style="height: 50px; overflow-y: scroll;">
             <p class="card-text">Bio: <%= user.bio %>
             </p>
             </div>
-            <img src="/images/icecream.png" alt="ice cream pic" style="height: 10rem; width: 15rem; margin: 5rem 0 15rem 15rem;">
+            <img src="/images/icecream.png" alt="ice cream pic" style="height: 10rem; width: 15rem;">
           </div>
         </div>
         <!-- Card for Update info -->
@@ -90,6 +90,7 @@
               </div>
             </div>
           </div>
+        </div>
        
 
       <%- include('../partials/footer') %>

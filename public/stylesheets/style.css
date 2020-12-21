@@ -18,6 +18,19 @@ button:active {
   background:rgb(236, 175, 211)
 }
 
+.container {
+  background-color: rgb(247, 242, 237);
+  margin-right: auto; 
+  margin-left:  auto;
+  margin-top: 50px;
+  max-width: 960px; 
+  border: 5px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Navbar */
 nav {
   height: 70px;
@@ -54,18 +67,6 @@ width: 20rem;
 }
 
 /* Landing Pages */
-.container {
-  background-color: rgb(247, 242, 237);
-  margin-right: auto; 
-  margin-left:  auto;
-  margin-top: 50px;
-  max-width: 960px; 
-  border: 5px solid gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #landingBody {
   background-color: rgb(247, 242, 237);
   margin-right: auto; 
@@ -105,21 +106,10 @@ width: 20rem;
 
 
 /* Product show*/
-#prodShowCont {
-  background-color: rgb(247, 242, 237);
-  margin-right: auto; 
-  margin-left:  auto;
-  margin-top: 20px;
-  max-width: 960px; 
-  border: 5px solid gray;
-
-}
 
 #prodCard {
   display: flex;
   justify-content: center;
-  height: 34rem;
-  width: 50rem;
   background-color: rgb(247, 242, 237);
   max-width: 960px;
   margin-right: auto; 
@@ -169,12 +159,12 @@ text-decoration: underline;
 }
 
 #prodScroll {
-  height: 36rem; 
+  height: 10rem; 
   overflow-y: scroll;
 }
 
 /* Product index card */
-#prodText {
+.prodText {
   color: rgb(69, 136, 133);
   font-family:'Dancing Script', cursive;
   font-size: 55px;
@@ -182,40 +172,12 @@ text-decoration: underline;
   margin: 20px 0;
 }
 
-#prodTable {
-  max-width: 960px;
-}
-
-#prodListCont {
-  background-color: rgb(250, 241, 231);
-  margin-right: auto; 
-  margin-left:  auto;
-  margin-top: 20px;
-  max-width: 960px; 
-  padding-right: 10px; 
-  padding-left:  10px;
-  border: 5px solid gray;
-  display: flex;
-  flex-direction: column;
-}
 
 /* Add New Product */
 
-#addProdCont {
-  background-color: rgb(250, 241, 231);
-  margin-right: auto; 
-  margin-left:  auto;
-  margin-top: 30px;
-  max-width: 960px; 
-  padding-right: 10px; 
-  padding-left:  10px;
-  border: 5px solid gray;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
 
-#newProd {
+
+.newProd {
   color: rgb(69, 136, 133);
   font-family:'Dancing Script', cursive;
   font-size: 55px;
@@ -248,14 +210,10 @@ text-decoration: underline;
 /* Messages Index */
 
 #messagesCont {
-  background-color: rgb(250, 241, 231);
   margin-right: auto; 
   margin-left:  auto;
   margin-top: 30px;
   max-width: 960px; 
-  padding-right: 10px; 
-  padding-left:  10px;
-  border: 5px solid gray;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -280,7 +238,7 @@ text-decoration: underline;
   background-color: rgb(69, 136, 133);
 }
 
-#messageTitle {
+.messageTitle {
   color: rgb(69, 136, 133);
   font-family:'Dancing Script', cursive;
   font-size: 55px;
@@ -289,21 +247,6 @@ text-decoration: underline;
 }
 
 /* Message thread page */
-
-#replyContainer {
-  background-color: rgb(250, 241, 231);
-  margin-right: auto; 
-  margin-left:  auto;
-  margin-top: 30px;
-  max-width: 960px; 
-  padding-right: 10px; 
-  padding-left:  10px;
-  border: 5px solid gray;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 #replyScroll {
   height: 18rem; 
   overflow-y: scroll;
@@ -318,6 +261,13 @@ text-decoration: underline;
 
 #avatarPhoto {
   border-radius: 50%
+}
+
+.replyHead{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /* #navBar {
 
