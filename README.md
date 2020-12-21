@@ -1,5 +1,6 @@
 # Faceify
-A publicly sourced skin-care database!
+A publicly sourced skin-care database and social platform!
+Designed with a mobile first approach
 
 
 ![landing](personalized-shopping/../public/images/landing.png)
@@ -13,6 +14,7 @@ A publicly sourced skin-care database!
 - Google OAuth
 - Github
 - Heroku
+- Visual Code Studio
 
 # Getting Started:
 
@@ -25,7 +27,8 @@ My Trello board can be viewed [here](https://trello.com/b/xRRvQe8B/unit-2-projec
 # Next-Steps:
 
 - Clean-up CSS
-- Clean up the comments section
-- Impliment a search function in the database so users can search products by skin type (oily, dry, sensitive..etc)
+- Add tags to the database
+- Impliment a search function in the database so users can search products by skin type (oily, dry, sensitive..etc), concern, or ingredients
 - Add the ability for a user to attach a link to the product they are posting 
 - Add the ability to @ the op in the message reply thread
+
