@@ -6,14 +6,14 @@ function index(req, res) {
     .populate('postedBy')
     .then((messages) => {
         res.render("messages/index", {
-            user: req.userName,
-            messages: messages
+            user: req.user._id,
+            messages
         })
     })
 }
 
 function create(req, res) {
-    req.body.postedBy = req.userName
+    req.body.postedBy = req.user._id
     req.body.avatar = req.user.avatar
     Message.create(req.body)
     .then(() => {
@@ -38,7 +38,7 @@ function reply(req, res) {
     Message.findById(req.params.id)
     .populate('postedBy')
     .then((message) => {
-      req.body.postedBy = req.userName
+      req.body.postedBy = req.user._id
       req.body.avatar = req.user.avatar
       message.replies.push(req.body)
       message.save().then(() => {
