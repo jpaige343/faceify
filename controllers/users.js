@@ -22,7 +22,7 @@ function showProfile(req, res) {
 function update(req,res) {
     User.findByIdAndUpdate(req.user._id, req.body, user)
     .then(() => {
-        res.redirect(`/users/${req.params.id}`)
+        res.redirect(`/users/profile`)
     })
     .catch((err) => {
         console.log(err)

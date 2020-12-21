@@ -19,7 +19,7 @@ button:active {
 }
 
 .container {
-  background-color: rgb(247, 242, 237);
+  background-color: white;
   margin-right: auto; 
   margin-left:  auto;
   margin-top: 50px;
@@ -32,18 +32,18 @@ button:active {
 }
 
 /* Navbar */
-nav {
+ nav {
   height: 70px;
-  background-color: rgb(250, 241, 231);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: white;
 }
 
 .nav-link {
   color: rgb(235, 42, 148);
   font-family:'Dancing Script', cursive;
   font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .log-out {
@@ -54,40 +54,40 @@ nav {
   background-color: white;
 }
 
-#navbarNav {
-  background-color: rgb(250, 241, 231);
+/* #navbarNav {
+  background-color: white;
   margin-left: 520px;
   color: rgb(235, 42, 148);
   width: 50rem;
 }
 
-#logOut {
-margin-left: 150px;
-width: 20rem;
-}
 
 /* Landing Pages */
 #landingBody {
-  background-color: rgb(247, 242, 237);
   margin-right: auto; 
   margin-left:  auto;
   margin-top: 5px;
   max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: none;
-
 }
 
 .faceify {
   font-family: 'Dancing Script', cursive; 
   font-size: 90px;
   margin-bottom: 10px;
+  color: rgb(97, 146, 144);
 }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.description {
+  margin-top: 20px; 
+  margin-bottom: 10px; 
+  font-family: 'Poppins', sans-serif; 
+  font-size: 20px;
+  color: rgb(97, 146, 144);
 }
 
 .logo {
@@ -104,13 +104,38 @@ width: 20rem;
  
 }
 
+/* Profile Page */
+
+#profileCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background-color: white;
+  max-width: 960px; 
+  border: 1px solid pink;
+  word-wrap: break-word;
+}
+
+.prof-card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color:  rgb(235, 42, 148);
+  word-wrap: break-word;
+}
+
+.profPic {
+  margin-left: 8rem;
+}
+
+
+
 
 /* Product show*/
-
 #prodCard {
   display: flex;
   justify-content: center;
-  background-color: rgb(247, 242, 237);
   max-width: 960px;
   margin-right: auto; 
   margin-left:  auto;
@@ -174,9 +199,6 @@ text-decoration: underline;
 
 
 /* Add New Product */
-
-
-
 .newProd {
   color: rgb(69, 136, 133);
   font-family:'Dancing Script', cursive;
@@ -217,6 +239,13 @@ text-decoration: underline;
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.message-card-body {
+  margin-right: auto; 
+  margin-left:  auto;
+  width: 300px;
+  max-width: 960px; 
 }
 
 #messageScroll {
@@ -269,9 +298,9 @@ text-decoration: underline;
   justify-content: center;
   align-items: center;
 }
-/* #navBar {
 
-} */
+
+
 
 
 

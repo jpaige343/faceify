@@ -1,29 +1,17 @@
 <%- include('partials/header') %>
-    <style>
-        h1 {
-            color: rgb(52, 167, 161);
-        }
-
-        h2 {
-            color: rgb(52, 167, 161);
-        }
-    </style>
-
-
     <div class="container" id="landingCont">
-        <div class="card" id="landingBody">
-            <div class="card-body">
+        <div class="card">
+            <div class="card-body" id="landingBody">
                 <% if (user) { %>
                     <h1 class="faceify"> Faceify </h1>
                    <p><a href="/products" class="landingLinks">Products  </a> 
-                        <a href="users/<%= user._id %>" class="landingLinks">Profile</a>
+                        <a href="users/profile" class="landingLinks">Profile</a>
                     </p> 
                     <img src="images/icecream.png" class="logo">
                     <% } else { %>
                         <h1 class="faceify">Faceify
                         </h1>
-                        <h2
-                            style="margin-top: 20px; margin-bottom: 10px; font-family: 'Poppins', sans-serif; font-size: 20px; ">
+                        <h2 class="description">
                             <i><strong>A publicly sourced skin-care database</i></strong></h2>
                         <div><a href="/auth/google" class="landingLinks">Get Started</a></div>
                         <div><img src="images/icecream.png" class="logo">

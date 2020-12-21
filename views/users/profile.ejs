@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
-  <div class="container">
-    <div class="card">
+  <div class="container" id="profCont">
+    <div class="card" id="profileCard">
       <ul class="nav nav-tabs " id="myTab" role="tablist">
         <!--Info Tab-->
         <li class="nav-item">
@@ -21,21 +21,21 @@
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="profileinfo" role="tabpanel" aria-labelledby="profileinfo-tab">
           <div class="card-body">
-            <h5 class="card-title"><%= user.name %>
+            <h5 class="prof-card-title"><%= user.name %>
             </h5>
-            <p class="card-text">Username: <%= user.userName %>
+            <p class="card-text"><b>Username:</b> <%= user.userName %>
             </p>
-            <p class="card-text">Skin Type: <%= user.skinType %>
+            <p class="card-text"><b>Skin Type:</b> <%= user.skinType %>
             </p>
-            <p class="card-text">Lifestyle: <%= user.lifestyle %>
+            <p class="card-text"><b>Lifestyle:</b> <%= user.lifestyle %>
             </p>
-            <p class="card-text">Goal: <%= user.goal %>
+            <p class="card-text"><b>Goal:</b> <%= user.goal %>
             </p>
             <div class="overflow-auto" style="height: 50px; overflow-y: scroll;">
-            <p class="card-text">Bio: <%= user.bio %>
+            <p class="card-text"><b>Bio:</b> <%= user.bio %>
             </p>
             </div>
-            <img src="/images/icecream.png" alt="ice cream pic" style="height: 10rem; width: 15rem;">
+            <img src="/images/icecream.png" alt="ice cream pic" class="profPic" style="height: 10rem; width: 15rem;">
           </div>
         </div>
         <!-- Card for Update info -->
