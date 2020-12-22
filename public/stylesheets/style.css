@@ -116,13 +116,14 @@ button:active {
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  color:  rgb(235, 42, 148);
+  
 }
 
 .profPic {
   margin-left: 3rem;
  height: 10rem;
  width: 15rem;
+ margin-left: 10rem;
 }
 
 .deleteBtn {
