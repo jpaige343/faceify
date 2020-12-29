@@ -1,26 +1,29 @@
 <%- include('partials/header') %>
-    <div class="container" id="landingCont">
+    <div class="container">
         <div class="card">
-            <div class="card-body" id="landingBody">
+            <div class="card-body">
                 <% if (user) { %>
                     <h1 class="faceify"> Faceify </h1>
-                   <p><a href="/products" class="landingLinks">Products  </a> 
-                        <a href="users/profile" class="landingLinks">Profile</a>
-                    </p> 
+                    <p>
+                        <a href="users/profile" class="landingLink1">Go To Profile</a>
+                    </p>
                     <img src="images/icecream.png" class="logo">
                     <% } else { %>
-                        <h1 class="faceify">Faceify
-                        </h1>
-                        <h2 class="description">
-                            <i><strong>A publicly sourced skin-care database</i></strong></h2>
-                        <div><a href="/auth/google" class="landingLinks">Get Started</a></div>
-                        <div><img src="images/icecream.png" class="logo">
+                        <div class="new-card-body">
+                            <h1 class="faceify">Faceify
+                            </h1>
+                            <div class="description">
+                                <p>A publicly sourced skin-care database <br> and knowledge share community</p>
+                            </div>
+                            <div><a href="/auth/google" class="landingLink2">Get Started</a></div>
+                            <div><img src="images/icecream.png" class="logo">
+                            </div>
+                            <% } %>
                         </div>
-                        <% } %>
             </div>
         </div>
     </div>
-</div>
+    </div>
 
 
 

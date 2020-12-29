@@ -1,9 +1,7 @@
-
 body {
-  font-family: 'Poppins', sans-serif; 
-  margin: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
   background-color: rgb(97, 146, 144);
-
 }
 
 a {
@@ -14,32 +12,28 @@ a:hover {
   color: gray;
 }
 
-button:active {
-  background:rgb(236, 175, 211)
-}
-
 .container {
   background-color: white;
-  margin-right: auto; 
-  margin-left:  auto;
-  margin-top: 50px;
-  max-width: 960px; 
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  max-width: 960px;
+  height: 80%;
   border: 5px solid gray;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 /* Navbar */
- nav {
+nav {
   height: 70px;
   background-color: white;
 }
 
 .nav-link {
   color: rgb(235, 42, 148);
-  font-family:'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 25px;
   display: flex;
   justify-content: center;
@@ -54,56 +48,64 @@ button:active {
   background-color: rgb(97, 146, 144);
 }
 
- #navbarNav {
+#navbarNav {
   background-color: white;
   z-index: 100;
 }
 
-
-/* Landing Pages */
-#landingBody {
-  margin-right: auto; 
-  margin-left:  auto;
-  margin-top: 5px;
+/* Display Cards */
+.card {
   max-width: 960px;
+  height: 80%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: none;
 }
 
+/* Landing logged in */
 .faceify {
-  font-family: 'Dancing Script', cursive; 
+  font-family: "Dancing Script", cursive;
   font-size: 90px;
-  margin-bottom: 10px;
-  color: rgb(97, 146, 144);
-}
-
-.description {
-  margin-top: 20px; 
-  margin-bottom: 10px; 
-  font-family: 'Poppins', sans-serif; 
-  font-size: 20px;
+  margin-bottom: 20px;
   color: rgb(97, 146, 144);
 }
 
 .logo {
-  width: 12rem; 
-  height: 12rem; 
-  margin-top: 30px;
+  width: 12rem;
+  height: 10rem;
+  margin-top: 50px;
 }
 
-.landingLinks {
+.landingLink1 {
   font-size: 30px;
+  padding: 0 0 0 10px;
+}
+
+/* Landing New */
+.description {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: rgb(97, 146, 144);
+  text-align: center;
+}
+
+.new-card-body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
- 
 }
 
-/* Profile Page */
+.landingLink2 {
+  font-size: 30px;
+  text-decoration: underline;
+}
 
+
+/* Profile Page */
 #profileCard {
   display: flex;
   flex-direction: column;
@@ -116,14 +118,13 @@ button:active {
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  
 }
 
 .profPic {
   margin-left: 3rem;
- height: 10rem;
- width: 15rem;
- margin-left: 10rem;
+  height: 10rem;
+  width: 15rem;
+  margin-left: 10rem;
 }
 
 .deleteBtn {
@@ -147,32 +148,29 @@ button:active {
   align-items: left;
 }
 
-
-
 /* Product show*/
 #prodCard {
   display: flex;
   justify-content: center;
   max-width: 960px;
-  margin-right: auto; 
-  margin-left:  auto;
+  margin-right: auto;
+  margin-left: auto;
   border: none;
 }
 
 #prodImg {
   border-radius: 50%;
-  height: 16rem; 
+  height: 16rem;
   width: 16rem;
   margin: 8rem 6rem 6rem 0;
 }
 
 .card-title1 {
   color: rgb(69, 136, 133);
-  font-family:'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 38px;
   display: flex;
   margin-top: 20px;
-  
 }
 
 .commentInput {
@@ -195,42 +193,41 @@ button:active {
 }
 
 .prodBack {
-margin-left: 25rem;
-font-size: 20px;
-text-decoration: underline;
+  margin-left: 25rem;
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 #prodScroll {
-  height: 10rem; 
+  height: 10rem;
   overflow-y: scroll;
 }
 
 /* Product index card */
 .prodText {
   color: rgb(69, 136, 133);
-  font-family:'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 55px;
-  text-align: center; 
+  text-align: center;
   margin: 20px 0;
 }
-
 
 /* Add New Product */
 .newProd {
   color: rgb(69, 136, 133);
-  font-family:'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 55px;
-  text-align: center; 
+  text-align: center;
   margin: 20px 0;
 }
 
 #prodForm {
-  margin-right: auto; 
-  margin-left:  auto;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 20px;
-  max-width: 960px; 
-  padding-right: 10px; 
-  padding-left:  10px;
+  max-width: 960px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 #addBtn {
@@ -249,24 +246,24 @@ text-decoration: underline;
 /* Messages Index */
 
 #messagesCont {
-  margin-right: auto; 
-  margin-left:  auto;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 30px;
-  max-width: 960px; 
+  max-width: 960px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
 .message-card-body {
-  margin-right: auto; 
-  margin-left:  auto;
+  margin-right: auto;
+  margin-left: auto;
   width: 300px;
-  max-width: 960px; 
+  max-width: 960px;
 }
 
 #messageScroll {
-  height: 25rem; 
+  height: 25rem;
   overflow-y: scroll;
 }
 
@@ -286,15 +283,15 @@ text-decoration: underline;
 
 .messageTitle {
   color: rgb(69, 136, 133);
-  font-family:'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 55px;
-  text-align: center; 
+  text-align: center;
   margin: 10px 0;
 }
 
 /* Message thread page */
 #replyScroll {
-  height: 18rem; 
+  height: 18rem;
   overflow-y: scroll;
 }
 
@@ -306,19 +303,12 @@ text-decoration: underline;
 }
 
 #avatarPhoto {
-  border-radius: 50%
+  border-radius: 50%;
 }
 
-.replyHead{
+.replyHead {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-
-
-
-
-
-
