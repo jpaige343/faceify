@@ -15,7 +15,7 @@ A publicly sourced skin-care database and social platform!
 - Visual Code Studio
 
 # Getting Started:
-For my unit 2 project at GA I wanted to see what it would look like to mesh my knowledge of Esthetics and new found interest in Software Engineering. This resulted in developing a community oriented approach to skin-care. Users can create and edit their personal profiles, share and perform full CRUD capabilities on products they use and love, and interact with the community via a message board to talk routines, expereinces, get ideas, and anything else skin-care related. 
+For my unit 2 project at GA I wanted to see what it would look like to mesh my knowledge of Esthetics and new found interest in Software Engineering. This resulted in developing a community oriented approach to skin-care. Users can create and edit their personal profiles, share and perform full CRUD capabilities on products they use and love, and interact with the community via a message board to talk routines, experiences, get ideas, and anything else skin-care related. 
 
 Check it out [here](https://faceify-project.herokuapp.com/)
 
