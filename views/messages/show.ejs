@@ -4,7 +4,7 @@
     <tbody>
       <tr>
         <th scope="row">
-          <div class="replyHead">
+          <div class="reply-head">
             <h4><b><%= message.content %></b></h4>
             <p>
               <i
@@ -27,7 +27,7 @@
   <table class="table table-striped">
     <tbody>
       <tr>
-        <th scope="row">
+        <th scope="row" class="replies-thread">
           <div class="overflow-auto" id="replyScroll">
             <% message.replies.forEach(r => { %>
             <h5><%= r.content %></h5>
