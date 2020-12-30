@@ -1,7 +1,8 @@
 <%- include("../partials/header", user) %>
 
-    <div class="container">
-        <h2 class="newProd">Add New Product</h2>
+   <div class="prod-container">
+       <div class="add-product">
+        <h2 class="prod-title">Add Product</h2> </div>
         <form class="new-form" action="/products" method="POST">
         <div class="form-group" id="prodForm">
             <label for="product-name">Product Brand/Name:</label>
@@ -15,6 +16,10 @@
             <label>Main Ingredients:</label>
             <input type="text" class="form-control" id="textInput" name="mainIngredients">
         </div>
+        <div class="form-group" id="prodForm">
+            <label for="description">Cost:</label>
+            <input type="text" class="form-control" id="textInput" name="cost">
+        </div>
         <div class="row">
             <div class="col-md-4 col-lg-2" id="prodForm">
               <button class="btn btn-primary btn-block" type="submit" id="addBtn">Add to Database</button>
@@ -22,5 +27,6 @@
     </form>
 </div>
 </div>
+
 
 <%- include("../partials/footer") %>

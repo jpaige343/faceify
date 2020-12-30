@@ -1,26 +1,44 @@
 <%- include('../partials/header') %>
-    <div class="container" id="messagesCont">
-        <h1 class="messageTitle">Faceify Message Board</h1>
-        <div class="overflow-auto" id="messageScroll">
-            <% messages.forEach(message=> { %>
-                <div class="card">
-                    <div class="message-card-body">
-                        <h5>
-                            <%= message.content %>
-                        </h5>
-                        <div>
-                            <%= message.createdAt.toLocaleString() %> - <a href="/users/<%= message.postedBy._id %>"><%= message.postedBy.userName %></a><img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
-                        </div>
-                        <a href="/messages/<%= message._id %>" class="btn btn-primary" id="repliesBtn">View Thread</a>
-                    </div>
-                </div>
-                <% }) %>
+<div class="container" id="messagesCont">
+  <h1 class="messageTitle">Faceify Message Board</h1>
+  <div class="overflow-auto" id="messageScroll">
+    <% messages.forEach(message=> { %>
+    <div class="card">
+      <div class="message-card-body">
+        <h5><%= message.content %></h5>
+        <div>
+          <%= message.createdAt.toLocaleString() %> -
+          <a href="/users/<%= message.postedBy._id %>"
+            ><%= message.postedBy.userName %></a
+          ><img
+            id="avatarPhoto"
+            width="30"
+            src="<%= message.avatar %>"
+            alt=""
+          />
         </div>
-        <form action="/messages" method="POST">
-            <div class="form-group">
-                <textarea type="text" class="form-control" name="content" placeholder="Enter Message Here.."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" id="messageBtn">Post Message</button>
-        </form>
+        <a
+          href="/messages/<%= message._id %>"
+          class="btn btn-primary"
+          id="repliesBtn"
+          >View Thread</a
+        >
+      </div>
     </div>
-    <%- include('../partials/footer') %>
+    <% }) %>
+  </div>
+  <form action="/messages" method="POST">
+    <div class="form-group">
+      <textarea
+        type="text"
+        class="form-control"
+        name="content"
+        placeholder="Enter Message Here.."
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" id="messageBtn">
+      Post Message
+    </button>
+  </form>
+</div>
+<%- include('../partials/footer') %>

@@ -1,11 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after {
+  /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+    but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference -
+  in most browser configurations this will be 10px */
+:root {
+  font-size: 90%;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   height: 100vh;
-  background-color: rgb(97, 146, 144);
 }
 
 a {
-  color: rgb(235, 42, 148);
+  color: rgb(243, 105, 186);
 }
 
 a:hover {
@@ -13,31 +32,37 @@ a:hover {
 }
 
 .container {
-  background-color: white;
+  background-color:rgb(97, 146, 144);
   margin-right: auto;
   margin-left: auto;
   margin-top: 30px;
   max-width: 960px;
   height: 80%;
-  border: 5px solid gray;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+   
 }
 
-/* Navbar */
+/* Main Navbar */
 nav {
-  height: 70px;
-  background-color: white;
+  height: 60px;
+  background-color:rgb(97, 146, 144);
 }
 
+.nav-logo {
+  height: 3rem;
+  width: 4rem;
+}
 .nav-link {
-  color: rgb(235, 42, 148);
-  font-family: "Dancing Script", cursive;
-  font-size: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: underline;
 }
 
 .log-out {
@@ -45,41 +70,39 @@ nav {
 }
 
 .navbar-toggler {
-  background-color: rgb(97, 146, 144);
+  background-color: white;
 }
 
 #navbarNav {
-  background-color: white;
+  background-color: rgb(97, 146, 144);
   z-index: 100;
 }
 
 /* Display Cards */
 .card {
-  max-width: 960px;
-  height: 80%;
-  display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
+  border: 2px rgb(243, 105, 186) solid;
 }
 
 /* Landing logged in */
 .faceify {
   font-family: "Dancing Script", cursive;
   font-size: 90px;
-  margin-bottom: 20px;
-  color: rgb(97, 146, 144);
+  margin-bottom: 30px;
+  color: rgb(76, 119, 118);
 }
 
 .logo {
-  width: 12rem;
-  height: 10rem;
-  margin-top: 50px;
+  width: 13rem;
+  height: 12rem;
+  margin-top: 40px;
 }
 
 .landingLink1 {
   font-size: 30px;
   padding: 0 0 0 10px;
+  text-decoration: underline;
 }
 
 /* Landing New */
@@ -88,7 +111,7 @@ nav {
   margin-bottom: 10px;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
-  color: rgb(97, 146, 144);
+  color: rgb(76, 119, 118);
   text-align: center;
 }
 
@@ -97,6 +120,8 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-shrink: 1;
+  
 }
 
 .landingLink2 {
@@ -106,25 +131,19 @@ nav {
 
 
 /* Profile Page */
-#profileCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  border: none;
-}
-
 .prof-card-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(76, 119, 118);
 }
 
-.profPic {
-  margin-left: 3rem;
-  height: 10rem;
-  width: 15rem;
-  margin-left: 10rem;
+.profile-logo {
+  width: 8rem;
+  height: 6rem;
+  
+  padding: 0;
 }
 
 .deleteBtn {
@@ -132,6 +151,19 @@ nav {
   background-color: rgb(97, 146, 144);
   color: white;
 }
+
+ul#myTab.nav.nav-tabs {
+  margin-left: 50px;
+}
+
+.my-collection {
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(76, 119, 118);
+}
+
 
 /* Profile Show */
 #showImg {
@@ -149,21 +181,6 @@ nav {
 }
 
 /* Product show*/
-#prodCard {
-  display: flex;
-  justify-content: center;
-  max-width: 960px;
-  margin-right: auto;
-  margin-left: auto;
-  border: none;
-}
-
-#prodImg {
-  border-radius: 50%;
-  height: 16rem;
-  width: 16rem;
-  margin: 8rem 6rem 6rem 0;
-}
 
 .card-title1 {
   color: rgb(69, 136, 133);
@@ -193,41 +210,59 @@ nav {
 }
 
 .prodBack {
-  margin-left: 25rem;
-  font-size: 20px;
+  font-size: 15px;
   text-decoration: underline;
 }
 
+.card-text-comments {
+  text-decoration: underline;
+}
+
+#ingredScroll {
+  height: 5rem;
+}
 #prodScroll {
-  height: 10rem;
+  height: 8rem;
   overflow-y: scroll;
 }
 
 /* Product index card */
-.prodText {
-  color: rgb(69, 136, 133);
+.prod-title-index {
+  color: white;
   font-family: "Dancing Script", cursive;
   font-size: 55px;
   text-align: center;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
 }
 
 /* Add New Product */
-.newProd {
-  color: rgb(69, 136, 133);
+.prod-title {
+  color: white;
   font-family: "Dancing Script", cursive;
   font-size: 55px;
   text-align: center;
-  margin: 20px 0;
+  margin: 0 0 50px 0;
+}
+
+.add-product {
+  background-color: rgb(97, 146, 144);
+}
+
+.prod-container {
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  max-width: 960px;
+  height: 80%;
+  border: 5px solid gray;
+  text-align: center;
+  overflow-x: auto;
 }
 
 #prodForm {
   margin-right: auto;
   margin-left: auto;
-  margin-top: 20px;
-  max-width: 960px;
-  padding-right: 10px;
-  padding-left: 10px;
 }
 
 #addBtn {

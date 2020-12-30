@@ -1,39 +1,72 @@
 <%- include('../partials/header') %>
-<div class="container" >
-    <table class="table table-striped">
-        <tbody>
-          <tr>
-            <th scope="row">
-                <div class="replyHead"><h4><b><%= message.content %></b></h4>
-                    <p><i><%= message.createdAt.toLocaleString() %> - <a href="/users/<%= user._id %>"> <%= message.postedBy.userName %></a> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt=""></i></p></div>
-        </tbody>
-      </table>
-<table class="table table-striped">
+<div class="container">
+  <table class="table table-striped">
     <tbody>
       <tr>
         <th scope="row">
-            <div class="overflow-auto" id="replyScroll">
+          <div class="replyHead">
+            <h4><b><%= message.content %></b></h4>
+            <p>
+              <i
+                ><%= message.createdAt.toLocaleString() %> -
+                <a href="/users/<%= user._id %>">
+                  <%= message.postedBy.userName %></a
+                >
+                <img
+                  id="avatarPhoto"
+                  width="30"
+                  src="<%= message.avatar %>"
+                  alt=""
+              /></i>
+            </p>
+          </div>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th scope="row">
+          <div class="overflow-auto" id="replyScroll">
             <% message.replies.forEach(r => { %>
-               <h5><%= r.content %></h5> 
-                <p><i><%= r.createdAt.toLocaleString() %> - <a href="/users/<%= r.postedById %>"><%= r.postedBy %> </a> <img id="avatarPhoto" width="30" src="<%= r.avatar %>" alt=""></i></p>
-                <hr>
+            <h5><%= r.content %></h5>
+            <p>
+              <i
+                ><%= r.createdAt.toLocaleString() %> -
+                <a href="/users/<%= r.postedById %>"><%= r.postedBy %> </a>
+                <img id="avatarPhoto" width="30" src="<%= r.avatar %>" alt=""
+              /></i>
+            </p>
+            <hr />
             <% }) %>
-            </div></th>
+          </div>
+        </th>
+      </tr>
     </tbody>
   </table>
 
-<table class="table table-striped">
+  <table class="table table-striped">
     <tbody>
       <tr>
-        <th scope="row"><form action="/messages/<%= message._id %>" method="POST">
+        <th scope="row">
+          <form action="/messages/<%= message._id %>" method="POST">
             <div class="message-form-group">
-                <textarea type="text" class="form-control" name="content" placeholder="Enter Message Here.."></textarea>
+              <textarea
+                type="text"
+                class="form-control"
+                name="content"
+                placeholder="Enter Message Here.."
+              ></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" id="replyBtn">Reply</button>
-        </form></th>
+            <button type="submit" class="btn btn-primary" id="replyBtn">
+              Reply
+            </button>
+          </form>
+        </th>
+      </tr>
     </tbody>
   </table>
 </div>
 
 <%- include('../partials/footer') %>
-

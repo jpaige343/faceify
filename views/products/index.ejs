@@ -1,14 +1,17 @@
 <%- include('../partials/header', user) %>
 
 
-<div class='container'>
-  <h3 class="prodText">Product Library</h3>
+<div class='prod-container'>
+  <div class="add-product">
+  <h3 class="prod-title-index">Product Library</h3>
+</div>
+<div class="overflow-auto" style="height: 450px; overflow-y: scroll">
 <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col" style='color: cream;'>Product Name:</th>
+        <th scope="col">Product Name:</th>
         <th scope="col">Description:</th>
-        <th scope="col">Main Ingredients:</th>
+        <th scope="col">Cost:</th>
         <th scope="col"></th>
       </tr>
     </thead>
@@ -17,14 +20,13 @@
       <tr>
         <td><%= p.name %></td>
         <td><%= p.description %></td>
-        <td><%= p.mainIngredients %></td>
+        <td><%= p.cost %></td>
         <td><a href="/products/<%= p._id %>">Details</a></td>
-        
-        
       </tr>
       <% }); %>
-
     </div>
+    </div>
+  
   
 
 

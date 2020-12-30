@@ -14,7 +14,8 @@ const productSchema = new Schema ({
     description: String,
     mainIngredients: String,
     comments: [commentsSchema],
-    contributor: [{type: Schema.Types.ObjectId, ref: "User"}]
+    contributor: [{type: Schema.Types.ObjectId, ref: "User"}],
+    cost: String
 }, {
     timestamps: true
 })

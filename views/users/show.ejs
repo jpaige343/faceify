@@ -1,22 +1,23 @@
 <%- include('../partials/header') %>
 
 <div class="container">
-<div class="show-card" style="width: 18rem;">
-    <img class="card-img-top" src="<%= userInfo.avatar %>" alt="avatar" id="showImg"> 
+  <div class="show-card" style="width: 18rem">
+    <img
+      class="card-img-top"
+      src="<%= userInfo.avatar %>"
+      alt="avatar"
+      id="showImg"
+    />
     <div class="show-card-body">
-        <h5 class="show-card-title">
-            <%= userInfo.name %>
-        </h5>
-        <p class="show-card-text">Skin Type: <%= userInfo.skinType %>
-        </p>
-        <p class="show-card-text">Goals: <%= userInfo.goal %>
-        </p>
-        <p class="show-card-text">Bio: <%= userInfo.bio %>
-        </p>
-        <p class="show-card-text">Collection: <% user.favorites.forEach(p => { %>
-            <a href="/products/<%= p._id %>"><%= p.name %></a><br>
-          <% }) %><br>
-        </p>
+      <h5 class="show-card-title"><%= userInfo.name %></h5>
+      <p class="show-card-text">Skin Type: <%= userInfo.skinType %></p>
+      <p class="show-card-text">Goals: <%= userInfo.goal %></p>
+      <p class="show-card-text">Bio: <%= userInfo.bio %></p>
+      <p class="show-card-text">
+        Collection: <% user.favorites.forEach(p => { %>
+        <a href="/products/<%= p._id %>"><%= p.name %></a><br />
+        <% }) %><br />
+      </p>
     </div>
   </div>
 </div>
