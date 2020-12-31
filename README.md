@@ -20,14 +20,9 @@ For my unit 2 project at GA I wanted to see what it would look like to mesh my k
 Check it out [here](https://faceify-project.herokuapp.com/)
 
 # Take a peek at a piece of the planning process:
-
 My Trello board can be viewed [here](https://trello.com/b/xRRvQe8B/unit-2-project)
 
 # Next-Steps:
-
-- Clean-up CSS
-- Fix style bugs
-- Adapt styling for larger screens
 - Add tags to products entered in the database
 - Impliment a search function in the database so users can search products by skin type (oily, dry, sensitive..etc), concern, or ingredients
 - Add the ability for a user to attach a link to the product they are posting 
