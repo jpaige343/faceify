@@ -54,10 +54,12 @@ nav {
 .nav-logo {
   height: 3rem;
   width: 4rem;
+  
 }
 .nav-link {
   color: white;
   font-size: 20px;
+  
 }
 
 .navbar-link {
@@ -77,6 +79,7 @@ nav {
   background-color: rgb(97, 146, 144);
   z-index: 100;
 }
+
 
 /* Display Cards */
 .card {
@@ -338,4 +341,13 @@ ul#myTab.nav.nav-tabs {
 
 .replies-thread {
   background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    background-color: white;
+  }
+  .messageTitle {
+    color: rgb(69, 136, 133);
+  }
 }

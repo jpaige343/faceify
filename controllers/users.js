@@ -11,8 +11,8 @@ function index(req, res) {
 
 function showProfile(req, res) {
     User.findById(req.params.id)
-    .then((user) => {
-        res.render('users/profile', {title: 'Update Profile', user: req.user})
+    .then((user, product) => {
+        res.render('users/profile', {title: 'Update Profile', user: req.user, product})
     })
     .catch((err) => {
         console.log(err)

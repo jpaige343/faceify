@@ -9,7 +9,7 @@
             <p>
               <i
                 ><%= message.createdAt.toLocaleString() %> -
-                <a href="/users/<%= user._id %>">
+                <a href="/users/<%= message.postedBy._id %>">
                   <%= message.postedBy.userName %></a
                 >
                 <img
