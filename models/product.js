@@ -15,9 +15,14 @@ const productSchema = new Schema ({
     mainIngredients: String,
     comments: [commentsSchema],
     contributor: [{type: Schema.Types.ObjectId, ref: "User"}],
-    cost: String
+    cost: String,
+    tags: [String]
 }, {
     timestamps: true
 })
+
+// productSchema.index({
+//     tags: 'text'
+// })
 
 module.exports = mongoose.model("Product", productSchema);

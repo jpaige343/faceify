@@ -11,7 +11,12 @@
       <b>Main Ingredients:</b>
       <%= product.mainIngredients %>
     </p>
+    <p class="card-text">
+        <b>Tags:</b>
+      <%= product.tags.toString().split(',').join(', '); %>
+      </p>
 </div>
+<br>
     <p class="card-text-comments"><b>Comments:</b></p>
     <div class="overflow-auto" id="prodScroll">
       <% product.comments.forEach(function(p) { %>
