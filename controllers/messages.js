@@ -25,7 +25,6 @@ function show(req,res) {
     Message.findById(req.params.id)
     .populate('postedBy')
     .then((message) => { 
-        console.log(message)
         res.render("messages/show", {
             user: req.user._id,
             message,
