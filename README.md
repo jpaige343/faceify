@@ -28,7 +28,7 @@ My Trello board can be viewed [here](https://trello.com/b/xRRvQe8B/unit-2-projec
 - Add functionality to @ the op in the message reply thread when other users reply to their messages
 - Prevent the same product from being entered twice
 - Implement a rating system to bring top rated products to the front of the search
-- Add legal disclaimer
+
 
 
 
