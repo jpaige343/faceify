@@ -23,7 +23,7 @@ Check it out [here](https://faceify-project.herokuapp.com/)
 My Trello board can be viewed [here](https://trello.com/b/xRRvQe8B/unit-2-project)
 
 # Next-Steps:
-- Impliment a search function in the database so users can search products by skin type (oily, dry, sensitive..etc), concern, or other
+- Implement a search function in the database so users can search products by skin type (oily, dry, sensitive..etc), concern, or other
 - Add the ability for a user to attach a link to the product they are posting and be able to verify it is a relevant, safe, and active link
 - Add functionality to @ the op in the message reply thread when other users reply to their messages
 - Prevent the same product from being entered twice
