@@ -1,5 +1,5 @@
 # Faceify
-A publicly sourced skin-care database and social platform!
+GA Unit-2 Project: A publicly sourced skin-care database and social platform!
 
 ![landing](faceify/../public/images/landing2.png)
 
