@@ -44,6 +44,24 @@ a:hover {
   justify-content: center;
    
 }
+/* Get Started Page */
+.get-started {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.welcome-header {
+  color:rgb(243, 105, 186);
+  padding: 20px 0;
+}
+
+.disclaimer-container {
+  padding-bottom: 20px;
+}
+.disclaimer {
+  padding: 20px 0;
+  text-align: center;
+}
 
 /* Main Navbar */
 nav {
